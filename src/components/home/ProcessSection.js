@@ -47,7 +47,7 @@ export default function ProcessSection() {
   const activeProcess = processes.find((p) => p.id === activeTab);
 
   return (
-    <section className="bg-[#18181a] text-white page-padding py-24 md:py-32">
+    <section className="bg-[#18181a] text-white page-padding pt-12 md:pt-32 pb-0">
       <div className="w-full flex flex-col gap-16">
         
         {/* Header */}

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-white page-padding pb-24 md:pb-32">
+    <section className="bg-[#F5F5F5] page-padding py-12 md:py-[100px]">
       {/* Large Image/Video Card */}
       <div className="relative w-full min-h-[500px] md:min-h-[600px] rounded-2xl overflow-hidden bg-stone-800 text-white shadow-2xl flex flex-col justify-end">
         

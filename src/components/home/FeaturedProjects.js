@@ -92,7 +92,7 @@ export default function FeaturedProjects() {
     // Tall container to create scrolling space
     <div ref={containerRef} className="h-[300vh] bg-white text-black relative">
       
-      <section className="sticky top-0 h-screen overflow-hidden flex flex-col justify-center page-padding py-24">
+      <section className="sticky top-0 h-screen overflow-hidden flex flex-col justify-center page-padding py-0">
         
         {/* Top Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-12 shrink-0">

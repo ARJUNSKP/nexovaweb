@@ -1,13 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#151515] text-white pt-20 pb-8 page-padding mt-auto">
+    <footer className="bg-[#151515] text-white pt-12 md:pt-20 pb-8 page-padding mt-auto">
       <div className="w-full flex flex-col gap-16">
         
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
+        <div className="flex flex-col md:flex-row justify-between gap-12 w-full">
           
           {/* Brand Column */}
-          <div className="md:col-span-4 lg:col-span-5 flex flex-col gap-8">
+          <div className="flex flex-col gap-8 max-w-sm">
             <div className="flex flex-col items-start">
               <img 
                 src="/Mask group.svg" 
@@ -18,7 +18,7 @@ export default function Footer() {
               />
             </div>
             
-            <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-sm">
+            <p className="text-gray-400 text-sm md:text-base leading-relaxed">
               Partner with us to turn strategic ambition into measurable business results.
             </p>
 
@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
 
           {/* Links Column */}
-          <div className="md:col-span-3 lg:col-span-3 flex flex-col gap-6">
+          <div className="flex flex-col gap-6 md:pl-8">
             <h4 className="text-sm font-semibold tracking-wider uppercase text-gray-300">
               Main Pages
             </h4>
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Column */}
-          <div className="md:col-span-5 lg:col-span-4 flex flex-col gap-6">
+          <div className="flex flex-col gap-6 md:pl-8">
             <h4 className="text-sm font-semibold tracking-wider uppercase text-gray-300">
               Contact
             </h4>

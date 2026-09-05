@@ -39,7 +39,7 @@ export default function ClientStoriesSection() {
   const progressPercentage = ((activeIndex + 1) / stories.length) * 100;
 
   return (
-    <section className="bg-white text-black page-padding py-24 md:py-32">
+    <section className="bg-white text-black page-padding py-12 md:py-[100px]">
       <div className="w-full flex flex-col gap-12">
         
         {/* Header */}
@@ -54,7 +54,7 @@ export default function ClientStoriesSection() {
         </div>
 
         {/* Quote Content */}
-        <div className="flex flex-col gap-8 relative min-h-[300px]">
+        <div className="flex flex-col gap-2 relative">
           {/* Quote Icon */}
           <div className="text-gray-800">
             <span className="text-6xl font-serif leading-none tracking-tighter">“</span>
@@ -78,14 +78,16 @@ export default function ClientStoriesSection() {
         </div>
 
         {/* Footer Area (Progress & Controls) */}
-        <div className="flex flex-col gap-6 mt-8">
+        <div className="flex flex-col">
           
           {/* Progress Bar */}
-          <div className="w-full h-[2px] bg-gray-200 relative overflow-hidden">
-            <div 
-              className="absolute top-0 left-0 h-full bg-[#82a4c9] transition-all duration-300"
-              style={{ width: `${progressPercentage}%` }}
-            />
+          <div className="w-full pt-[43px] pb-[40px]">
+            <div className="w-full h-[2px] bg-gray-200 relative overflow-hidden">
+              <div 
+                className="absolute top-0 left-0 h-full bg-[#82a4c9] transition-all duration-300"
+                style={{ width: `${progressPercentage}%` }}
+              />
+            </div>
           </div>
 
           {/* Author & Controls */}

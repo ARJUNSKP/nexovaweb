@@ -40,7 +40,7 @@ export default function ContactSection() {
   });
 
   return (
-    <section className="bg-[#f5f5f5] text-black page-padding py-24 md:py-32">
+    <section className="bg-[#f5f5f5] text-black page-padding py-12 md:py-[100px]">
       <div className="w-full flex flex-col md:flex-row gap-16 md:gap-12 lg:gap-24">
         
         {/* Left Side: Text Content */}
