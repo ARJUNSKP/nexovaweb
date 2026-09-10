@@ -110,7 +110,7 @@ export default function ProcessSection() {
             </div>
 
             {/* Image */}
-            <div className="flex-1 w-full h-[300px] lg:h-[450px] relative rounded-2xl overflow-hidden border-2 border-[#1a73e8] shadow-[0_0_30px_rgba(26,115,232,0.15)] animate-in fade-in zoom-in-95 duration-500" key={`img-${activeTab}`}>
+            <div className="flex-1 w-full h-[300px] lg:h-[450px] relative rounded-2xl overflow-hidden  shadow-[0_0_30px_rgba(26,115,232,0.15)] animate-in fade-in zoom-in-95 duration-500" key={`img-${activeTab}`}>
               <img 
                 src={activeProcess.image} 
                 alt={activeProcess.title}
