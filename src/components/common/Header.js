@@ -116,7 +116,7 @@ export default function Header() {
 
       {/* Right Drawer Menu */}
       <div 
-        className={`fixed top-0 right-0 bottom-0 z-40 w-full md:w-[700px] text-white transition-transform duration-500 ease-in-out overflow-y-auto ${
+        className={`fixed top-0 right-0 bottom-0 z-40 w-full md:w-[500px] text-white transition-transform duration-500 ease-in-out overflow-y-auto ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

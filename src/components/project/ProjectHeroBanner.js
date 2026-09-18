@@ -67,9 +67,9 @@ export default function ProjectHeroBanner() {
         </FadeIn>
       </div>
       {/* Bottom Labels */}
-      <div className="absolute bottom-0 left-0 w-full z-20 px-4 md:px-[43px] pb-8 md:pb-12">
+      <div className="absolute bottom-0 left-0 w-full z-20 px-4 md:px-[43px]">
         <div className="w-full">
-          <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 md:gap-8 pt-6 border-t border-white/20">
+          <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 md:gap-8 py-8 md:py-8 border-t border-white/20">
             {bannerData[currentImage].labels.map((label, i) => (
               <div key={i} className="text-white text-xs md:text-sm tracking-widest uppercase font-semibold transition-opacity duration-500">
                 {label}
