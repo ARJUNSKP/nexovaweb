@@ -1,12 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import { projects } from "@/data/projects";
+import FadeIn from "@/components/common/FadeIn";
 
 export default function ProjectSection() {
   return (
     <section id="projects" className="py-24 bg-[#f8f8f8] w-full px-4 md:px-[43px]">
       <div className="w-full">
-        <div className="mb-12">
+        <FadeIn delay={0} className="mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-200 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
             <span className="text-[11px] font-bold text-gray-600 tracking-wider uppercase">
@@ -20,29 +21,35 @@ export default function ProjectSection() {
           <p className="text-gray-600 text-[16px] max-w-xl">
             Explore a selection of residential, commercial, and hospitality projects each delivered with precision, quality, and attention to detail.
           </p>
-        </div>
+        </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project) => (
-            <Link
-              href={`/project/${project.id}`}
-              key={project.id}
-              className={`relative group h-[400px] md:h-[540px] rounded-[32px] overflow-hidden flex flex-col justify-end p-8 ${project.color} transition-transform duration-300 hover:-translate-y-2 cursor-pointer shadow-lg hover:shadow-xl`}
-            >
-              <div className="absolute top-8 right-8 z-20">
-                <span className="bg-white/90 backdrop-blur-sm text-gray-800 text-[11px] font-bold tracking-wider px-3 py-1.5 rounded uppercase">
-                  {project.tag}
-                </span>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {projects.map((project, index) => (
+            <FadeIn delay={100 + (index % 4) * 100} key={project.id} className="w-full">
+              <Link
+                href={`/project/${project.id}`}
+                className="group flex flex-col gap-4 cursor-pointer w-full h-full"
+              >
+              {/* Image Container */}
+              <div className="relative h-[300px] md:h-[380px] overflow-hidden bg-gray-100 shadow-md">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                />
               </div>
-              
-              {/* Gradient Overlay for text readability over placeholder colors */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-0"></div>
 
-              <div className="relative z-10 text-white transform transition-transform duration-300 group-hover:translate-x-2">
-                <h3 className="text-2xl font-medium mb-1">{project.title}</h3>
-                <p className="text-white/70 text-sm">{project.location}</p>
+              {/* Text underneath the image */}
+              <div className="flex flex-col gap-1 px-1">
+                <h3 className="text-xl font-medium text-black group-hover:text-[#0055a4] transition-colors duration-300">
+                  {project.title}
+                </h3>
+                <p className="text-gray-500 text-[15px]">
+                  {project.location}
+                </p>
               </div>
-            </Link>
+              </Link>
+            </FadeIn>
           ))}
         </div>
       </div>

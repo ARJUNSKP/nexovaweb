@@ -25,15 +25,7 @@ export default function TestimonialSection() {
           {/* Left Side: Testimonial */}
           <div className="max-w-2xl flex flex-col gap-6">
             
-            {/* Overlapping Avatars/Icons */}
-            <div className="flex -space-x-4">
-              <div className="w-12 h-12 rounded-full border-2 border-white bg-gray-600 flex items-center justify-center overflow-hidden">
-                <span className="text-xs">HJ</span>
-              </div>
-              <div className="w-12 h-12 rounded-full border-2 border-white bg-white flex items-center justify-center overflow-hidden">
-                <span className="text-xs text-black font-bold">LOGO</span>
-              </div>
-            </div>
+            
 
             {/* Testimonial Text */}
             <h3 className="text-2xl md:text-4xl leading-snug font-medium text-white">

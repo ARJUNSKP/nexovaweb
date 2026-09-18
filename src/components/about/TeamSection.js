@@ -1,76 +1,93 @@
 import React from "react";
 import FadeIn from "@/components/common/FadeIn";
 
+const LinkedinIcon = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+  >
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+  </svg>
+);
+
 const teamMembers = [
   {
     id: 1,
-    name: "Ronald R.",
-    role: "Founder",
+    name: "Alexander Morrison",
+    role: "CO-founder & CEO",
   },
   {
     id: 2,
-    name: "Devon L.",
-    role: "Chief Executive Officer",
+    name: "Sarah Okonkwo",
+    role: "CO-founder & CEO",
   },
   {
     id: 3,
-    name: "Jacob J.",
-    role: "Chief Financial Officer",
+    name: "James Whitfield",
+    role: "CO-founder & CEO",
+  },
+  {
+    id: 4,
+    name: "Chris Renwick",
+    role: "CO-founder & CEO",
   },
 ];
 
 export default function TeamSection() {
   return (
-    <section className="bg-black text-white py-24 md:py-32 w-full px-4 md:px-[43px]">
-      <div className="w-full flex flex-col gap-16">
+    <section className="bg-[#F5F5F5] text-black py-24 md:py-32 w-full page-padding">
+      <div className="w-full flex flex-col gap-12">
         
         {/* Header */}
-        <div className="flex flex-col items-end w-full">
+        <div className="flex flex-col items-center text-center w-full">
           <FadeIn delay={0}>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#252525] rounded-full text-xs font-semibold tracking-widest text-gray-300 uppercase mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
-              The People Behind Nivasata
-            </div>
+            <p className="text-sm font-medium tracking-[0.2em] text-gray-500 uppercase mb-4">
+              Our Team
+            </p>
           </FadeIn>
           
           <FadeIn delay={100}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-medium tracking-tight">
-              Our Team
+            <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-gray-900">
+              The People Behind The Work
             </h2>
           </FadeIn>
         </div>
 
-        {/* Content */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-start">
-          
-          {/* Left Title */}
-          <div className="lg:w-1/4 w-full">
-            <FadeIn delay={200}>
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">Executives</h3>
-            </FadeIn>
-          </div>
-
-          {/* Cards */}
-          <div className="lg:w-3/4 w-full grid grid-cols-1 md:grid-cols-3 gap-6">
-            {teamMembers.map((member, index) => (
-              <FadeIn delay={300 + index * 100} key={member.id} className="w-full">
-                <div className="group relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1a252f] to-[#2c3e50] shadow-xl flex items-center justify-center cursor-pointer border border-white/5">
-                  {/* Image Placeholder */}
-                  <span className="text-gray-500 font-medium group-hover:opacity-0 transition-opacity duration-500">Image Placeholder</span>
-                  
-                  {/* Gradient Overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                  {/* Details (appear on hover) */}
-                  <div className="absolute bottom-0 left-0 w-full p-6 lg:p-8 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col gap-1">
-                    <h4 className="text-2xl font-bold text-white">{member.name}</h4>
-                    <p className="text-gray-300 text-sm font-medium">{member.role}</p>
+        {/* Content / Cards */}
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
+          {teamMembers.map((member, index) => {
+            const teamImages = [
+              "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80",
+              "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+              "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
+              "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800&q=80"
+            ];
+            return (
+              <FadeIn delay={200 + index * 100} key={member.id} className="w-full">
+                <div className="w-full flex flex-col rounded-none overflow-hidden bg-white shadow-sm border border-black/5">
+                  {/* Image Area */}
+                  <div className="w-full aspect-[4/5] bg-[#e0e0e0] flex items-center justify-center relative overflow-hidden">
+                    <img src={teamImages[index]} alt={member.name} className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                  </div>
+                
+                {/* Info Area */}
+                <div className="flex items-center justify-between p-6 bg-white">
+                  <div className="flex flex-col gap-1">
+                    <h4 className="text-[17px] font-medium text-gray-900">{member.name}</h4>
+                    <p className="text-[11px] text-gray-500 uppercase tracking-wide">{member.role}</p>
+                  </div>
+                  <div className="w-8 h-8 rounded bg-[#0A66C2] flex items-center justify-center shrink-0 ml-2">
+                    <LinkedinIcon className="w-4 h-4 text-white" />
                   </div>
                 </div>
-              </FadeIn>
-            ))}
-          </div>
-
+              </div>
+            </FadeIn>
+            );
+          })}
         </div>
 
       </div>

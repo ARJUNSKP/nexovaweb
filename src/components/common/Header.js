@@ -106,73 +106,71 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Full Screen Menu Overlay */}
+      {/* Backdrop */}
       <div 
-        className={`fixed inset-0 z-30 bg-[#0a0a0a] text-white transition-transform duration-500 ease-in-out overflow-y-auto ${
+        className={`fixed inset-0 z-30 bg-black/60 backdrop-blur-sm transition-opacity duration-500 ${
+          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setMenuOpen(false)}
+      />
+
+      {/* Right Drawer Menu */}
+      <div 
+        className={`fixed top-0 right-0 bottom-0 z-40 w-full md:w-[450px] text-white transition-transform duration-500 ease-in-out overflow-y-auto ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="min-h-screen w-full flex flex-col-reverse md:flex-row pt-28 pb-12 px-6 md:px-12 lg:px-24 gap-12 md:gap-8">
+        {/* Background Image inside Drawer */}
+        <img 
+          src="/Eyv1ZwKmJy5eSYZZEwI9We1sNis.jpg" 
+          alt="Menu Background" 
+          className="absolute inset-0 w-full h-full object-cover object-center z-0"
+        />
+        {/* Dark Overlay inside Drawer */}
+        <div className="absolute inset-0 bg-black/85 z-10" />
+
+        {/* Close Button inside Drawer */}
+        <button
+          onClick={() => setMenuOpen(false)}
+          className="absolute top-6 right-6 z-30 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors text-white"
+          aria-label="Close menu"
+        >
+          <X className="w-6 h-6" />
+        </button>
+
+        <div className="relative z-20 min-h-screen w-full flex flex-col pt-32 pb-12 px-8">
           
-          {/* Left Column (Bottom on Mobile): Navigation Links */}
-          <div className="w-full md:w-1/2 flex flex-col justify-center gap-6 md:gap-8 pt-10 md:pt-0 border-t md:border-t-0 md:border-r border-white/10 md:pr-12">
-            <div className="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-2 md:mb-8">
-              Navigation
-            </div>
+          <div className="flex flex-col gap-12 flex-1">
             
-            <nav className="flex flex-col items-start gap-4 md:gap-6">
+            {/* Main Navigation Links */}
+            <nav className="w-full flex flex-col gap-6">
               {menuLinks.map((link, index) => (
                 <Link 
                   key={index} 
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className={`inline-block text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight transition-transform duration-300 hover:scale-[1.05] origin-left ${
-                    pathname === link.href ? "text-white" : "text-gray-500 hover:text-gray-300"
+                  className={`inline-block text-3xl md:text-4xl font-light tracking-wide uppercase transition-colors duration-300 ${
+                    pathname === link.href ? "text-white" : "text-gray-300 hover:text-white"
                   }`}
                   style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
                 >
-                  {link.name}
+                  {link.name} <span className="opacity-50">+</span>
                 </Link>
               ))}
             </nav>
 
-            {/* Mobile CTA */}
-            <a
-              href="#"
-              className="md:hidden mt-4 flex items-center justify-center gap-2 px-6 py-4 bg-[#0055a4] text-white font-medium rounded hover:bg-[#004080] transition-colors"
-            >
-              Start a Project <ArrowRight className="w-4 h-4" />
-            </a>
           </div>
 
-          {/* Right Column (Top on Mobile): Process Steps Graphic */}
-          <div className="w-full md:w-1/2 flex flex-col justify-center md:pl-12">
-            <div className="text-xs font-semibold tracking-widest text-gray-500 uppercase mb-6 md:mb-12">
-              Our Process
-            </div>
-            
-            <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-10">
-              {processSteps.map((step) => {
-                const Icon = step.icon;
-                return (
-                  <div key={step.id} className="flex flex-col gap-3 md:gap-4 group cursor-pointer">
-                    <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#0055a4] group-hover:border-[#0055a4] transition-all duration-300">
-                      <Icon className="w-4 h-4 md:w-6 md:h-6 text-gray-400 group-hover:text-white transition-colors duration-300" />
-                    </div>
-                    <div>
-                      <div className="text-[8px] md:text-[10px] font-bold tracking-widest text-gray-500 mb-1">
-                        PHASE 0{step.id}
-                      </div>
-                      <h4 className="text-sm md:text-xl font-semibold mb-1 md:mb-2 leading-tight">{step.title}</h4>
-                      <p className="text-gray-400 text-xs md:text-sm leading-relaxed hidden sm:block">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
+          {/* Bottom Bar: Contact Info */}
+          <div className="mt-16 pt-8 flex flex-col gap-4 w-full border-t border-white/20">
+            <a href="tel:+4402079460318" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors text-sm">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              +44 (0) 20 7946 0318
+            </a>
+            <a href="mailto:hello@construa.com" className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors text-sm">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              hello@construa.com
+            </a>
           </div>
 
         </div>

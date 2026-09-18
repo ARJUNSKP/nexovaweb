@@ -133,11 +133,10 @@ export default function FeaturedProjects() {
             >
               {/* Background Image */}
               {project.image ? (
-                <Image 
+                <img 
                   src={project.image} 
                   alt={project.title}
-                  fill
-                  className="object-cover z-0"
+                  className="absolute inset-0 w-full h-full object-cover z-0"
                 />
               ) : (
                 <div className={`absolute inset-0 w-full h-full ${project.color} z-0`} />
@@ -150,8 +149,7 @@ export default function FeaturedProjects() {
                 </span>
               </div>
 
-              {/* Bottom Gradient Overlay */}
-              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10" />
+              {/* Bottom Gradient Overlay removed */}
 
               {/* Bottom Text */}
               <div className="absolute bottom-6 left-6 z-20">

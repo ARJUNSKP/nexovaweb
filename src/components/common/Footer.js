@@ -4,22 +4,22 @@ export default function Footer() {
   return (
     <footer className="bg-[#151515] text-white pt-12 md:pt-20 pb-8 page-padding mt-auto">
       <div className="w-full flex flex-col gap-16">
-        
+
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row justify-between gap-12 w-full">
-          
+
           {/* Brand Column */}
           <div className="flex flex-col gap-8 max-w-sm">
             <div className="flex flex-col items-start">
-              <img 
-                src="/Mask group.svg" 
-                alt="Nexova Logo" 
-                width={86} 
-                height={108} 
+              <img
+                src="/Mask group.svg"
+                alt="Nexova Logo"
+                width={86}
+                height={108}
                 className="object-contain"
               />
             </div>
-            
+
             <p className="text-gray-400 text-sm md:text-base leading-relaxed">
               Partner with us to turn strategic ambition into measurable business results.
             </p>
@@ -70,7 +70,7 @@ export default function Footer() {
             Designed & Developed By Arjun | Fayas
           </div>
         </div>
-        
+
       </div>
     </footer>
   );

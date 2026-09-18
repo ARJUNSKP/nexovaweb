@@ -3,54 +3,64 @@ import FadeIn from "@/components/common/FadeIn";
 
 export default function VisionSection() {
   return (
-    <section className="bg-[#111111] text-white py-24 md:py-32 w-full px-4 md:px-[43px]">
-      <div className="w-full flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+    <section className="bg-white text-black py-24 md:py-32 w-full px-[43px]">
+      <div className="w-full flex flex-col gap-8">
         
-        {/* Left Text */}
-        <div className="w-full lg:w-[30%] flex flex-col gap-8 pt-8">
-          <FadeIn delay={0}>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#252525] rounded-full text-xs font-semibold tracking-widest text-gray-300 uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
-              Our Strategic Outlook
-            </div>
-          </FadeIn>
+        {/* Top Row: Vision & Mission */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          <FadeIn delay={100}>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-medium tracking-tight">
-              Our Vision
-            </h2>
-          </FadeIn>
-
-          <FadeIn delay={200} className="flex flex-col gap-6 text-gray-400 text-[15px] leading-relaxed">
-            <p>
-              At Nivasata, our vision is to become a symbol of excellence in the real estate industry by shaping timeless spaces that enrich lives and communities. We aspire to lead with innovation, integrity, and a commitment to quality—delivering developments that reflect the perfect harmony of aesthetics, functionality, and sustainability.
-            </p>
-            <p>
-              We believe that true luxury is not just defined by materials or finishes, but by meaning, intention, and lasting impact. Every project we undertake is a reflection of our commitment to creating environments that inspire, endure, and harmonize with both people and place.
-            </p>
-          </FadeIn>
-        </div>
-
-        {/* Center Image Placeholder */}
-        <div className="w-full lg:w-[40%]">
-          <FadeIn delay={300}>
-            <div className="w-full aspect-[4/5] rounded-[24px] bg-gradient-to-br from-[#1a252f] to-[#2c3e50] shadow-2xl flex items-center justify-center">
-              <span className="text-gray-500 font-medium tracking-wide">Image Placeholder</span>
+          {/* Our Vision Card */}
+          <FadeIn delay={0} className="w-full">
+            <div className="bg-[#f8f8f8] rounded-none overflow-hidden border border-black/5 h-full flex flex-col">
+              {/* Image Area */}
+              <div className="w-full h-[240px] relative overflow-hidden bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Our Vision" className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
+              {/* Content Area */}
+              <div className="p-8 md:p-10 flex flex-col flex-1">
+                <h3 className="text-3xl font-medium mb-6">Our Vision</h3>
+                <p className="text-gray-600 text-[15px] leading-relaxed">
+                  At Nivasata, our vision is to become a symbol of excellence in the real estate industry by shaping timeless spaces that enrich lives and communities. We aspire to lead with innovation, integrity, and a commitment to quality—delivering developments that reflect the perfect harmony of aesthetics, functionality, and sustainability.
+                </p>
+              </div>
             </div>
           </FadeIn>
+
+          {/* Our Mission Card */}
+          <FadeIn delay={100} className="w-full">
+            <div className="bg-[#f8f8f8] rounded-none overflow-hidden border border-black/5 h-full flex flex-col">
+              {/* Image Area */}
+              <div className="w-full h-[240px] relative overflow-hidden bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Our Mission" className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
+              {/* Content Area */}
+              <div className="p-8 md:p-10 flex flex-col flex-1">
+                <h3 className="text-3xl font-medium mb-6">Our Mission</h3>
+                <p className="text-gray-600 text-[15px] leading-relaxed">
+                  Our mission is to consistently deliver premium residential and commercial spaces that exceed expectations. We strive to foster long-term relationships with our clients through transparency, expert planning, and flawless execution, turning aspirations into enduring realities and redefining the meaning of luxury living.
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+
         </div>
 
-        {/* Right Text */}
-        <div className="w-full lg:w-[30%] flex flex-col gap-6 text-gray-400 text-[15px] leading-relaxed lg:pt-48">
-          <FadeIn delay={400} className="flex flex-col gap-6">
-            <p>
-              From the grandeur of a facade to the subtlety of natural light in an interior space, our work is a balance of aesthetics, utility, and sustainability.
-            </p>
-            <p>
-              We envision a future where every Nivasata project sets a new benchmark in design and construction, turning aspirations into enduring realities and redefining the meaning of luxury living.
-            </p>
-          </FadeIn>
-        </div>
+        {/* Bottom Row: Our Value */}
+        <FadeIn delay={200} className="w-full">
+          <div className="bg-[#f8f8f8] rounded-none overflow-hidden border border-black/5 flex flex-col md:flex-row">
+            {/* Image Area */}
+            <div className="w-full md:w-[40%] h-[240px] md:h-auto relative shrink-0 overflow-hidden bg-gray-200">
+              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Our Value" className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+            {/* Content Area */}
+            <div className="w-full md:w-[60%] p-8 md:p-12 flex flex-col justify-center">
+              <h3 className="text-3xl font-medium mb-6">Our Value</h3>
+              <p className="text-gray-600 text-[15px] leading-relaxed">
+                Integrity is our cornerstone. We believe in placing the needs and satisfaction of our clients at the forefront of every decision and service delivery. Innovation, adaptability, and accountability have enabled us to provide exceptional solutions and build lasting partnerships. We are committed to sustainable development and creating environments that endure for generations.
+              </p>
+            </div>
+          </div>
+        </FadeIn>
 
       </div>
     </section>

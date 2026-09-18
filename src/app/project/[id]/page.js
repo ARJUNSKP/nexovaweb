@@ -31,25 +31,27 @@ export default async function ProjectDetailPage({ params }) {
       {/* Hero Banner (Matches Main Project Page) */}
       <div className="relative w-full h-[100dvh] bg-black">
         <img
-          src="/G0DZwFMbldOpF4lQTkO6cr18tQ.webp"
-          alt="Project Cover"
+          src={project.image || "/G0DZwFMbldOpF4lQTkO6cr18tQ.webp"}
+          alt={`${project.title} Cover`}
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
+        {/* Dark Overlay for Text Readability */}
+        <div className="absolute inset-0 bg-black/50 z-0"></div>
         
         {/* Title Content */}
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center md:items-start md:justify-end px-4 md:px-[43px] pb-8 md:pb-[43px]">
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 md:px-[43px]">
           <div className="mb-4">
             <span className="bg-white/20 backdrop-blur-md text-white text-[11px] font-bold tracking-wider px-3 py-1.5 rounded uppercase">
               {project.tag}
             </span>
           </div>
           <h1 
-            className="text-5xl md:text-7xl font-bold text-white text-center md:text-left tracking-tight mb-2"
+            className="text-5xl md:text-7xl font-bold text-white text-center tracking-tight mb-2"
             style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}
           >
             {project.title}
           </h1>
-          <p className="text-white/80 text-lg flex items-center gap-2">
+          <p className="text-white/80 text-lg flex items-center justify-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-white/60"></span> {project.location}
           </p>
         </div>
@@ -110,20 +112,20 @@ export default async function ProjectDetailPage({ params }) {
           <h2 className="text-3xl font-bold mb-12 text-black tracking-tight">Project Gallery</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[250px]">
-            <FadeIn delay={0} className="md:col-span-8 row-span-2 rounded-[32px] bg-gradient-to-br from-gray-200 to-gray-300 shadow-md flex items-center justify-center">
-              <span className="text-gray-400 font-medium">Image Placeholder</span>
+            <FadeIn delay={0} className="md:col-span-8 row-span-2 rounded-[32px] overflow-hidden shadow-md relative bg-gray-100">
+              <img src={project.gallery?.[0]} alt="Project Gallery Image" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </FadeIn>
-            <FadeIn delay={150} className="md:col-span-4 row-span-1 rounded-[32px] bg-gradient-to-br from-gray-300 to-gray-400 shadow-md flex items-center justify-center">
-              <span className="text-gray-500 font-medium">Image</span>
+            <FadeIn delay={150} className="md:col-span-4 row-span-1 rounded-[32px] overflow-hidden shadow-md relative bg-gray-100">
+              <img src={project.gallery?.[1]} alt="Project Gallery Image" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </FadeIn>
-            <FadeIn delay={300} className="md:col-span-4 row-span-2 rounded-[32px] bg-gradient-to-br from-gray-100 to-gray-200 shadow-md flex items-center justify-center">
-              <span className="text-gray-400 font-medium">Portrait Image</span>
+            <FadeIn delay={300} className="md:col-span-4 row-span-2 rounded-[32px] overflow-hidden shadow-md relative bg-gray-100">
+              <img src={project.gallery?.[2]} alt="Project Gallery Image" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </FadeIn>
-            <FadeIn delay={100} className="md:col-span-8 row-span-1 rounded-[32px] bg-gradient-to-br from-gray-400 to-gray-500 shadow-md flex items-center justify-center">
-              <span className="text-gray-600 font-medium text-white">Landscape Image</span>
+            <FadeIn delay={100} className="md:col-span-8 row-span-1 rounded-[32px] overflow-hidden shadow-md relative bg-gray-100">
+              <img src={project.gallery?.[3]} alt="Project Gallery Image" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </FadeIn>
-            <FadeIn delay={200} className="md:col-span-12 row-span-2 rounded-[32px] bg-gradient-to-br from-gray-300 to-gray-200 shadow-md flex items-center justify-center">
-              <span className="text-gray-500 font-medium">Hero Image</span>
+            <FadeIn delay={200} className="md:col-span-12 row-span-2 rounded-[32px] overflow-hidden shadow-md relative bg-gray-100">
+              <img src={project.gallery?.[4]} alt="Project Gallery Image" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </FadeIn>
           </div>
         </div>
