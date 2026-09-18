@@ -78,7 +78,7 @@ export default async function ProjectDetailPage({ params }) {
             </p>
           </div>
           
-          <div className="bg-[#f8f8f8] p-8 rounded-[24px] h-fit">
+          <div className="bg-[#f8f8f8] p-8 h-fit">
             <h3 className="text-xl font-bold mb-6 text-black tracking-tight">Project Details</h3>
             
             <div className="space-y-6">
@@ -112,19 +112,19 @@ export default async function ProjectDetailPage({ params }) {
           <h2 className="text-3xl font-bold mb-12 text-black tracking-tight">Project Gallery</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[250px]">
-            <FadeIn delay={0} className="md:col-span-8 row-span-2 rounded-[32px] overflow-hidden shadow-md relative bg-gray-100">
+            <FadeIn delay={0} className="md:col-span-8 row-span-2  overflow-hidden shadow-md relative bg-gray-100">
               <img src={project.gallery?.[0]} alt="Project Gallery Image" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </FadeIn>
-            <FadeIn delay={150} className="md:col-span-4 row-span-1 rounded-[32px] overflow-hidden shadow-md relative bg-gray-100">
+            <FadeIn delay={150} className="md:col-span-4 row-span-1  overflow-hidden shadow-md relative bg-gray-100">
               <img src={project.gallery?.[1]} alt="Project Gallery Image" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </FadeIn>
-            <FadeIn delay={300} className="md:col-span-4 row-span-2 rounded-[32px] overflow-hidden shadow-md relative bg-gray-100">
+            <FadeIn delay={300} className="md:col-span-4 row-span-2  overflow-hidden shadow-md relative bg-gray-100">
               <img src={project.gallery?.[2]} alt="Project Gallery Image" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </FadeIn>
-            <FadeIn delay={100} className="md:col-span-8 row-span-1 rounded-[32px] overflow-hidden shadow-md relative bg-gray-100">
+            <FadeIn delay={100} className="md:col-span-8 row-span-1  overflow-hidden shadow-md relative bg-gray-100">
               <img src={project.gallery?.[3]} alt="Project Gallery Image" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </FadeIn>
-            <FadeIn delay={200} className="md:col-span-12 row-span-2 rounded-[32px] overflow-hidden shadow-md relative bg-gray-100">
+            <FadeIn delay={200} className="md:col-span-12 row-span-2  overflow-hidden shadow-md relative bg-gray-100">
               <img src={project.gallery?.[4]} alt="Project Gallery Image" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </FadeIn>
           </div>

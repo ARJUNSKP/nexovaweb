@@ -67,7 +67,7 @@ export default function ContactForm() {
 
         {/* Right Side: Form Container */}
         <div className="w-full md:w-7/12">
-          <div className="bg-white rounded-xl p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+          <div className="bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
             
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-gray-900 mb-2">Let's talk about your goals</h3>
@@ -77,7 +77,7 @@ export default function ContactForm() {
             </div>
 
             {submitted && (
-              <div className="mb-6 p-4 bg-green-50 text-green-700 rounded border border-green-200 text-sm">
+              <div className="mb-6 p-4 bg-green-50 text-green-700  border border-green-200 text-sm">
                 Thank you! Your message has been sent successfully.
               </div>
             )}
@@ -95,7 +95,7 @@ export default function ContactForm() {
                     name="name"
                     type="text"
                     placeholder="Jane Smith"
-                    className={`w-full bg-[#f4f4f5] px-4 py-3 rounded text-sm outline-none transition-colors border ${
+                    className={`w-full bg-[#f4f4f5] px-4 py-3  text-sm outline-none transition-colors border ${
                       formik.touched.name && formik.errors.name 
                         ? "border-red-500 focus:border-red-500 bg-red-50" 
                         : "border-transparent focus:border-gray-300"
@@ -118,7 +118,7 @@ export default function ContactForm() {
                     name="email"
                     type="email"
                     placeholder="jane@example.com"
-                    className={`w-full bg-[#f4f4f5] px-4 py-3 rounded text-sm outline-none transition-colors border ${
+                    className={`w-full bg-[#f4f4f5] px-4 py-3 text-sm outline-none transition-colors border ${
                       formik.touched.email && formik.errors.email 
                         ? "border-red-500 focus:border-red-500 bg-red-50" 
                         : "border-transparent focus:border-gray-300"
@@ -143,7 +143,7 @@ export default function ContactForm() {
                   name="address"
                   type="text"
                   placeholder="Your address"
-                  className={`w-full bg-[#f4f4f5] px-4 py-3 rounded text-sm outline-none transition-colors border ${
+                  className={`w-full bg-[#f4f4f5] px-4 py-3 text-sm outline-none transition-colors border ${
                     formik.touched.address && formik.errors.address 
                       ? "border-red-500 focus:border-red-500 bg-red-50" 
                       : "border-transparent focus:border-gray-300"
@@ -165,7 +165,7 @@ export default function ContactForm() {
                 <select
                   id="interest"
                   name="interest"
-                  className={`w-full bg-[#f4f4f5] px-4 py-3 rounded text-sm outline-none transition-colors border appearance-none ${
+                  className={`w-full bg-[#f4f4f5] px-4 py-3  text-sm outline-none transition-colors border appearance-none ${
                     formik.touched.interest && formik.errors.interest 
                       ? "border-red-500 focus:border-red-500 bg-red-50" 
                       : "border-transparent focus:border-gray-300"
@@ -195,7 +195,7 @@ export default function ContactForm() {
                   name="message"
                   placeholder="Write your message..."
                   rows={4}
-                  className={`w-full bg-[#f4f4f5] px-4 py-3 rounded text-sm outline-none transition-colors border resize-none ${
+                  className={`w-full bg-[#f4f4f5] px-4 py-3  text-sm outline-none transition-colors border resize-none ${
                     formik.touched.message && formik.errors.message 
                       ? "border-red-500 focus:border-red-500 bg-red-50" 
                       : "border-transparent focus:border-gray-300"
@@ -216,7 +216,7 @@ export default function ContactForm() {
                     id="subscribe"
                     name="subscribe"
                     type="checkbox"
-                    className="w-4 h-4 rounded border-gray-300 text-gray-900 focus:ring-gray-900"
+                    className="w-4 h-4 border-gray-300 text-gray-900 focus:ring-gray-900"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     checked={formik.values.subscribe}
@@ -231,7 +231,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={formik.isSubmitting}
-                className="w-full bg-[#111111] hover:bg-black text-white font-medium py-3.5 rounded mt-4 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full bg-[#111111] hover:bg-black text-white font-medium py-3.5  mt-4 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {formik.isSubmitting ? "Sending..." : "Send Enquiry"}
               </button>

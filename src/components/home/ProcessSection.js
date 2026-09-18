@@ -67,7 +67,7 @@ export default function ProcessSection() {
         </div>
 
         {/* Interactive Area */}
-        <div className="bg-[#222224] rounded-3xl p-4 md:p-8 flex flex-col gap-8">
+        <div className="bg-[#222224]  p-4 md:p-8 flex flex-col gap-8">
           
           {/* Tabs */}
           <div className="flex flex-row overflow-x-auto hide-scrollbar gap-2 border-b border-white/5 pb-4 md:pb-0 md:border-none">
@@ -78,7 +78,7 @@ export default function ProcessSection() {
                 <button
                   key={process.id}
                   onClick={() => setActiveTab(process.id)}
-                  className={`flex items-center gap-3 px-6 py-4 rounded-2xl transition-all duration-300 whitespace-nowrap flex-1 justify-center md:justify-start ${
+                  className={`flex items-center gap-3 px-6 py-4 transition-all duration-300 whitespace-nowrap flex-1 justify-center md:justify-start ${
                     isActive 
                       ? "bg-[#18181a] text-white shadow-lg" 
                       : "text-gray-500 hover:text-gray-300 hover:bg-white/5"
@@ -92,7 +92,7 @@ export default function ProcessSection() {
           </div>
 
           {/* Content Area */}
-          <div className="bg-[#18181a] rounded-2xl p-6 md:p-12 flex flex-col lg:flex-row gap-12 items-center min-h-[400px]">
+          <div className="bg-[#18181a]  p-6 md:p-12 flex flex-col lg:flex-row gap-12 items-center min-h-[400px]">
             
             {/* Text Content */}
             <div className="flex-1 flex flex-col gap-6 w-full animate-in fade-in slide-in-from-bottom-4 duration-500" key={`text-${activeTab}`}>
@@ -110,7 +110,7 @@ export default function ProcessSection() {
             </div>
 
             {/* Image */}
-            <div className="flex-1 w-full h-[300px] lg:h-[450px] relative rounded-2xl overflow-hidden  shadow-[0_0_30px_rgba(26,115,232,0.15)] animate-in fade-in zoom-in-95 duration-500" key={`img-${activeTab}`}>
+            <div className="flex-1 w-full h-[300px] lg:h-[450px] relative overflow-hidden  shadow-[0_0_30px_rgba(26,115,232,0.15)] animate-in fade-in zoom-in-95 duration-500" key={`img-${activeTab}`}>
               <img 
                 src={activeProcess.image} 
                 alt={activeProcess.title}

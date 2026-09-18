@@ -102,7 +102,7 @@ export default function ResultsSection() {
           {results.map((result) => (
             <div 
               key={result.id} 
-              className="bg-[#222224] rounded-3xl p-8 md:p-12 flex flex-col justify-between min-h-[320px] transition-transform hover:-translate-y-1 duration-300"
+              className="bg-[#222224] rounded-none p-8 md:p-12 flex flex-col justify-between min-h-[320px] transition-transform hover:-translate-y-1 duration-300"
             >
               {/* Stat (Top Right) */}
               <div className="flex justify-end">

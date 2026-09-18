@@ -7,21 +7,6 @@ export default function ProjectSection() {
   return (
     <section id="projects" className="py-24 bg-[#f8f8f8] w-full px-4 md:px-[43px]">
       <div className="w-full">
-        <FadeIn delay={0} className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-200 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
-            <span className="text-[11px] font-bold text-gray-600 tracking-wider uppercase">
-              CASE STUDIES
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-[56px] leading-[1.1] font-medium text-black mb-6 tracking-tight">
-            Built with precision. <br className="hidden md:block" />
-            Delivered with confidence.
-          </h2>
-          <p className="text-gray-600 text-[16px] max-w-xl">
-            Explore a selection of residential, commercial, and hospitality projects each delivered with precision, quality, and attention to detail.
-          </p>
-        </FadeIn>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project, index) => (

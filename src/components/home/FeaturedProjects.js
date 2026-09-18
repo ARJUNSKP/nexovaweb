@@ -129,7 +129,7 @@ export default function FeaturedProjects() {
           {projects.map((project) => (
             <div 
               key={project.id} 
-              className={`relative ${project.width} h-[400px] md:h-[498px] rounded-xl overflow-hidden shrink-0 group cursor-pointer snap-start`}
+              className={`relative ${project.width} h-[400px] md:h-[498px] overflow-hidden shrink-0 group cursor-pointer snap-start`}
             >
               {/* Background Image */}
               {project.image ? (

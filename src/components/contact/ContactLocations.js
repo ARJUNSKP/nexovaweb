@@ -37,7 +37,7 @@ export default function ContactLocations() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {locations.map((loc, idx) => (
-            <div key={idx} className="p-8 rounded-[24px] bg-[#f8f8f8] border border-gray-100 hover:shadow-lg transition-shadow">
+            <div key={idx} className="p-8 bg-[#f8f8f8] border border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-black mb-4">{loc.city}</h3>
               <p className="text-gray-600 mb-1">{loc.address}</p>
               <p className="text-gray-600 mb-6">{loc.postal}</p>

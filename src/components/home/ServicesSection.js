@@ -48,10 +48,10 @@ export default function ServicesSection() {
           {services.map((service) => (
             <div 
               key={service.id} 
-              className="bg-white rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col sm:flex-row gap-6 items-center sm:items-start transition-transform hover:-translate-y-1"
+              className="bg-white  p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex flex-col sm:flex-row gap-6 items-center sm:items-start transition-transform hover:-translate-y-1"
             >
               {/* Image */}
-              <div className="relative w-full sm:w-40 h-40 sm:h-32 rounded-xl shrink-0 overflow-hidden">
+              <div className="relative w-full sm:w-40 h-40 sm:h-32 shrink-0 overflow-hidden">
                 {service.image ? (
                   <Image 
                     src={service.image}

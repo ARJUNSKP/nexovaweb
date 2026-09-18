@@ -3,7 +3,7 @@ import FadeIn from "@/components/common/FadeIn";
 
 export default function OverviewSection() {
   return (
-    <section className="bg-black text-white py-24 md:py-32 w-full page-padding">
+    <section className="bg-black text-white py-24 md:py-32 w-full px-4 md:px-[43px]">
       <div className="w-full flex flex-col items-center text-center mb-16">
         <FadeIn delay={0}>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#252525] rounded-full text-xs font-semibold tracking-widest text-gray-300 mb-8 uppercase">

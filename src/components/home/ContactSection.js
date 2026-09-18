@@ -59,7 +59,7 @@ export default function ContactSection() {
 
         {/* Right Side: Form Container */}
         <div className="w-full md:w-7/12">
-          <div className="bg-white rounded-xl p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+          <div className="bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
             
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-gray-900 mb-2">Let's talk about your goals</h3>

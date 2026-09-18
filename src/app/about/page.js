@@ -1,6 +1,7 @@
 import VisionSection from "@/components/about/VisionSection";
 import OverviewSection from "@/components/about/OverviewSection";
 import TeamSection from "@/components/about/TeamSection";
+import ResultsSection from "@/components/home/ResultsSection";
 
 export const metadata = {
   title: "About Us | Nexova",
@@ -33,6 +34,7 @@ export default function AboutPage() {
       </div>
       <OverviewSection />
       <VisionSection />
+        <ResultsSection />
       <TeamSection />
 
     </main>
