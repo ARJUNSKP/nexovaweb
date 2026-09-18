@@ -50,10 +50,10 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="flex flex-col gap-4">
-              <li><a href="mailto:hello@construa.com" className="text-gray-400 hover:text-white transition-colors text-sm">hello@construa.com</a></li>
-              <li><a href="tel:+4402079460318" className="text-gray-400 hover:text-white transition-colors text-sm">+44 (0) 20 7946 0318</a></li>
+              <li><a href="mailto:contact@example.com" className="text-gray-400 hover:text-white transition-colors text-sm">contact@example.com</a></li>
+              <li><a href="tel:+15551234567" className="text-gray-400 hover:text-white transition-colors text-sm">+1 (555) 123-4567</a></li>
               <li className="text-gray-400 text-sm leading-relaxed max-w-[200px]">
-                12 Aldgate Square, London, EC3N 1AB
+                123 Main Street, Cityville, State, 12345
               </li>
             </ul>
           </div>

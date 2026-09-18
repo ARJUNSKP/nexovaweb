@@ -163,13 +163,13 @@ export default function Header() {
 
           {/* Bottom Bar: Contact Info */}
           <div className="mt-auto -mx-8 bg-[#87673c] flex flex-col sm:flex-row items-center justify-center p-6 sm:p-8 text-sm md:text-base border-t-2 border-[#94764c]">
-            <a href="https://wa.me/918589036199" className="flex-1 flex items-center justify-center gap-3 text-white hover:text-gray-200 transition-colors sm:border-r sm:border-white/30 pb-4 sm:pb-0 px-4 w-full sm:w-auto border-b sm:border-b-0 border-white/30 mb-4 sm:mb-0">
+            <a href="https://wa.me/15551234567" className="flex-1 flex items-center justify-center gap-3 text-white hover:text-gray-200 transition-colors sm:border-r sm:border-white/30 pb-4 sm:pb-0 px-4 w-full sm:w-auto border-b sm:border-b-0 border-white/30 mb-4 sm:mb-0">
              
-              <span className="whitespace-nowrap tracking-wide">+91 8589036199</span>
+              <span className="whitespace-nowrap tracking-wide">+1 (555) 123-4567</span>
             </a>
-            <a href="mailto:Reservations@Intergrandhotels.Com" className="flex-1 flex items-center justify-center gap-3 text-white hover:text-gray-200 transition-colors px-4 w-full sm:w-auto">
+            <a href="mailto:contact@example.com" className="flex-1 flex items-center justify-center gap-3 text-white hover:text-gray-200 transition-colors px-4 w-full sm:w-auto">
        
-              <span className="whitespace-nowrap tracking-wide sm:truncate md:overflow-visible">Reservations@Intergrandhotels.Com</span>
+              <span className="whitespace-nowrap tracking-wide sm:truncate md:overflow-visible">contact@example.com</span>
             </a>
           </div>
 

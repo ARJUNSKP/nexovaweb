@@ -1,25 +1,25 @@
 export default function ContactLocations() {
   const locations = [
     {
-      city: "Mumbai HQ",
-      address: "124 Horizon Towers, Bandra Kurla Complex",
-      postal: "Mumbai, Maharashtra 400051",
-      phone: "+91 (22) 2456-7890",
-      email: "mumbai@nexova.com",
+      city: "New York HQ",
+      address: "123 Business Avenue, Suite 100",
+      postal: "New York, NY 10001",
+      phone: "+1 (555) 123-4567",
+      email: "ny@example.com",
     },
     {
-      city: "Bangalore",
-      address: "Tech Park Phase 2, Electronic City",
-      postal: "Bangalore, Karnataka 560100",
-      phone: "+91 (80) 4567-8901",
-      email: "blr@nexova.com",
+      city: "London",
+      address: "456 Tech Park, Innovation Way",
+      postal: "London, UK E1 6AN",
+      phone: "+44 20 7946 0958",
+      email: "london@example.com",
     },
     {
-      city: "Delhi NCR",
-      address: "Sector 42, DLF Cyber City",
-      postal: "Gurugram, Haryana 122002",
-      phone: "+91 (124) 5678-9012",
-      email: "delhi@nexova.com",
+      city: "Tokyo",
+      address: "789 Cyber Street, Tech District",
+      postal: "Tokyo, Japan 100-0001",
+      phone: "+81 3-1234-5678",
+      email: "tokyo@example.com",
     },
   ];
 
