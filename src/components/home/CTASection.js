@@ -24,7 +24,7 @@ export default function CTASection() {
           Whether it's a residential project, commercial space, or renovation, we're here to bring your vision to life—with quality, clarity, and on-time delivery.
         </p>
 
-        <button className="px-8 py-3.5 bg-white text-black font-medium text-lg rounded shadow-lg hover:bg-gray-100 transition-colors mt-4">
+        <button className="px-6 py-3 bg-white text-black font-medium text-lg rounded shadow-lg hover:bg-gray-100 transition-colors mt-4">
           Get Started
         </button>
       </div>

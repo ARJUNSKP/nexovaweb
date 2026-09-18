@@ -1,6 +1,7 @@
 import HeroBanner from "@/components/home/HeroBanner";
 import AboutSection from "@/components/home/AboutSection";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
+import ProjectSection from "@/components/project/ProjectSection";
 import ServicesSection from "@/components/home/ServicesSection";
 import TestimonialSection from "@/components/home/TestimonialSection";
 import ProcessSection from "@/components/home/ProcessSection";

@@ -19,17 +19,20 @@ export const metadata = {
 
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import LenisProvider from "@/components/common/LenisProvider";
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} font-sans h-full antialiased`}
+      className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <Header />
-        {children}
-        <Footer />
+      <body className="min-h-screen flex flex-col">
+        <LenisProvider>
+          <Header />
+          {children}
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );

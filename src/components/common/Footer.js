@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-[#151515] text-white pt-12 md:pt-20 pb-8 page-padding mt-auto">
@@ -35,11 +37,10 @@ export default function Footer() {
               Main Pages
             </h4>
             <ul className="flex flex-col gap-4">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Home</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Projects</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Blogs</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Contact</a></li>
+              <li><Link href="/" className="text-gray-400 hover:text-white transition-colors text-sm">Home</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">About Us</Link></li>
+              <li><Link href="/project" className="text-gray-400 hover:text-white transition-colors text-sm">Projects</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">Contact</Link></li>
             </ul>
           </div>
 

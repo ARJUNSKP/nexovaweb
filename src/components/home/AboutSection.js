@@ -35,7 +35,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section className="bg-white text-black page-padding py-[100px]">
+    <section className="bg-white text-black page-padding pt-[100px]">
       <div className="w-full">
         <h2 
           ref={containerRef}
