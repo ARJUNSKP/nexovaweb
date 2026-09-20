@@ -29,3 +29,21 @@ body {
     @apply w-full px-4 md:px-[43px];
   }
 }
+
+@keyframes modalFadeIn {
+  from { opacity: 0; backdrop-filter: blur(0px); }
+  to { opacity: 1; backdrop-filter: blur(4px); }
+}
+
+@keyframes modalSlideUp {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-modal-overlay {
+  animation: modalFadeIn 0.3s ease-out forwards;
+}
+
+.animate-modal-content {
+  animation: modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

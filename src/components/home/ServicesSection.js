@@ -7,24 +7,24 @@ const services = [
     description: "End-to-end delivery of large-scale residential and mixed-use developments, from land acquisition through to final handover.",
     image: "/home/Image (white and blue concrete building under blue sky during daytime).png",
   },
-  {
-    id: 2,
-    title: "Design & Planning",
-    description: "End-to-end delivery of large-scale residential and mixed-use developments, from land acquisition through to final handover.",
-    image: "/home/Image (man in yellow shirt and blue denim jeans jumping on brown wooden railings under blue and).png",
-  },
+  // {
+  //   id: 2,
+  //   title: "Design & Planning",
+  //   description: "End-to-end delivery of large-scale residential and mixed-use developments, from land acquisition through to final handover.",
+  //   image: "/home/Image (man in yellow shirt and blue denim jeans jumping on brown wooden railings under blue and).png",
+  // },
   {
     id: 3,
     title: "Construction Management",
     description: "End-to-end delivery of large-scale residential and mixed-use developments, from land acquisition through to final handover.",
     image: "/home/Image (a person drawing a diagram on a piece of paper) (1).png",
   },
-  {
-    id: 4,
-    title: "Turnkey Delivery",
-    description: "End-to-end delivery of large-scale residential and mixed-use developments, from land acquisition through to final handover.",
-    image: "/home/Image (white and blue concrete building under blue sky during daytime).png",
-  },
+  // {
+  //   id: 4,
+  //   title: "Turnkey Delivery",
+  //   description: "End-to-end delivery of large-scale residential and mixed-use developments, from land acquisition through to final handover.",
+  //   image: "/home/Image (white and blue concrete building under blue sky during daytime).png",
+  // },
 ];
 
 export default function ServicesSection() {
