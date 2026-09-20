@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const projects = [
@@ -8,164 +8,158 @@ const projects = [
     id: 1,
     title: "Abhishek House",
     location: "Calicut, Kerala, India",
-    type: "HOUSE",
+    type: "Residential",
     image: "/home/Image (Hotel).png",
-    width: "w-[300px] md:w-[900px]",
   },
   {
     id: 2,
     title: "Parakkal House",
     location: "Calicut, Kerala, India",
-    type: "HOUSE",
+    type: "Residential",
     image: "/home/Image (Hotel) (2).png",
-    width: "w-[300px] md:w-[550px]",
   },
   {
     id: 3,
-    title: "Abhishek House",
-    location: "Calicut, Kerala, India",
-    type: "HOUSE",
+    title: "IBS Campus Project",
+    location: "Trivandrum, Kerala, India",
+    type: "Commercial",
     image: "/home/Image (Hotel) (1).png",
-    width: "w-[300px] md:w-[550px]",
   },
   {
     id: 4,
-    title: "Sharma Residence",
-    location: "Kochi, Kerala, India",
-    type: "HOUSE",
+    title: "Lulu Mall Calicut",
+    location: "Calicut, Kerala, India",
+    type: "Commercial",
     image: "/home/Image (Hotel).png",
-    width: "w-[300px] md:w-[550px]",
   },
   {
     id: 5,
     title: "Nexus Commercial",
     location: "Bangalore, Karnataka, India",
-    type: "COMMERCIAL",
+    type: "Commercial",
     image: "/home/Image (Hotel) (2).png",
-    width: "w-[300px] md:w-[550px]",
   },
 ];
 
 export default function FeaturedProjects() {
-  const scrollContainerRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -400, behavior: "smooth" });
-    }
+  const next = () => {
+    setActiveIndex((prev) => (prev + 1) % projects.length);
   };
 
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 400, behavior: "smooth" });
-    }
+  const prev = () => {
+    setActiveIndex((prev) => (prev - 1 + projects.length) % projects.length);
   };
 
   // Auto scroll functionality
   useEffect(() => {
     const interval = setInterval(() => {
-      if (scrollContainerRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-        // If we've reached the end, loop back to start
-        if (scrollLeft + clientWidth >= scrollWidth - 10) {
-          scrollContainerRef.current.scrollTo({ left: 0, behavior: "smooth" });
-        } else {
-          scrollContainerRef.current.scrollBy({ left: 400, behavior: "smooth" });
-        }
-      }
-    }, 3000); // Scrolls every 3 seconds
+      next();
+    }, 4000); // Scrolls every 4 seconds
 
     return () => clearInterval(interval);
   }, []);
 
+  const getRelativePosition = (index) => {
+    const total = projects.length;
+    if (index === activeIndex) return 0; // Center
+    if (index === (activeIndex - 1 + total) % total) return -1; // Left
+    if (index === (activeIndex + 1) % total) return 1; // Right
+    
+    // Smooth entry/exit positions
+    if (index === (activeIndex + 2) % total) return 2; // Entering from right
+    if (index === (activeIndex - 2 + total) % total) return -2; // Exiting to left
+    
+    return 3; // Hidden far away
+  };
+
+  const getPositionClass = (relativePos) => {
+    switch (relativePos) {
+      case 0:
+        return "left-[calc(10%+12px)] w-[calc(80%-24px)] md:left-[calc(20%+12px)] md:w-[calc(60%-24px)] opacity-100 z-20 cursor-default";
+      case -1:
+        return "left-0 w-[calc(10%-12px)] md:left-0 md:w-[calc(20%-12px)] opacity-100 z-10 cursor-pointer brightness-75 hover:brightness-100";
+      case 1:
+        return "left-[calc(90%+12px)] w-[calc(10%-12px)] md:left-[calc(80%+12px)] md:w-[calc(20%-12px)] opacity-100 z-10 cursor-pointer brightness-75 hover:brightness-100";
+      case -2:
+        return "left-[calc(-10%-12px)] w-[calc(10%-12px)] md:left-[calc(-20%-12px)] md:w-[calc(20%-12px)] opacity-0 z-0 pointer-events-none";
+      case 2:
+        return "left-[calc(100%+24px)] w-[calc(10%-12px)] md:left-[calc(100%+24px)] md:w-[calc(20%-12px)] opacity-0 z-0 pointer-events-none";
+      default:
+        return "left-[calc(100%+24px)] w-[calc(10%-12px)] md:left-[calc(100%+24px)] md:w-[calc(20%-12px)] opacity-0 z-0 pointer-events-none";
+    }
+  };
+
   return (
     <section className="py-24 bg-white text-black page-padding overflow-hidden">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-12">
-        <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-gray-100 rounded-full text-xs font-semibold tracking-widest text-gray-500 mb-6 uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
-            Projects
-          </div>
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-gray-900">
-            Our Featured Projects
-          </h2>
-        </div>
+      <div className="flex flex-col md:flex-row justify-between md:items-end gap-6 mb-12">
+        <h2 className="text-4xl md:text-5xl lg:text-[56px] font-bold tracking-tight text-black uppercase" style={{ fontFamily: "'Bebas Neue', 'Oswald', sans-serif", lineHeight: "1" }}>
+          PROJECTS
+        </h2>
         
-        <div className="flex flex-col items-start md:items-end gap-6 max-w-sm">
-          {/* <p className="text-gray-500 text-base md:text-lg md:text-right">
-            Explore projects where thoughtful design meets reliable execution each one tailored to meet real-world demands.
-          </p> */}
-          
-          {/* Navigation Arrows */}
-          <div className="flex gap-4">
-            <button 
-              onClick={scrollLeft}
-              className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors"
-              aria-label="Previous project"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-gray-700">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-              </svg>
-            </button>
-            <button 
-              onClick={scrollRight}
-              className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors"
-              aria-label="Next project"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-gray-700">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </button>
-          </div>
+        {/* Navigation Arrows */}
+        <div className="flex gap-4 pb-1">
+          <button 
+            onClick={prev}
+            className="w-10 h-10 flex items-center justify-center hover:bg-gray-50 transition-colors rounded-full"
+            aria-label="Previous project"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-black">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <button 
+            onClick={next}
+            className="w-10 h-10 flex items-center justify-center hover:bg-gray-50 transition-colors rounded-full"
+            aria-label="Next project"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-black">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
         </div>
       </div>
 
-      <div className="relative">
-        <div 
-          ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory w-full pb-8 [&::-webkit-scrollbar]:hidden"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          {projects.map((project) => (
+      <div className="relative w-full h-[300px] md:h-[450px]">
+        {projects.map((project, index) => {
+          const relativePos = getRelativePosition(index);
+          const positionClass = getPositionClass(relativePos);
+          const isCenter = relativePos === 0;
+
+          return (
             <div 
               key={project.id} 
-              className={`relative ${project.width} h-[400px] md:h-[498px] overflow-hidden shrink-0 group cursor-pointer snap-start`}
+              onClick={() => {
+                if (relativePos === -1) prev();
+                if (relativePos === 1) next();
+              }}
+              className={`absolute top-0 h-full overflow-hidden shrink-0 group bg-gray-100 transition-all duration-700 ease-in-out ${positionClass}`}
             >
               {/* Background Image */}
               {project.image ? (
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover z-0"
+                  className={`absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-700 ${isCenter ? 'group-hover:scale-105' : ''}`}
                 />
               ) : (
-                <div className={`absolute inset-0 w-full h-full ${project.color} z-0`} />
+                <div className={`absolute inset-0 w-full h-full bg-gray-200 z-0`} />
               )}
               
-              {/* Top Tag */}
-              <div className="absolute top-6 right-6 z-20">
-                <span className="px-3 py-1 bg-white/90 text-gray-900 text-xs font-bold rounded shadow-sm">
-                  {project.type}
-                </span>
-              </div>
-
-              {/* Bottom Gradient Overlay removed */}
+              {/* Bottom Gradient Overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 transition-opacity duration-700 ${isCenter ? 'opacity-90 group-hover:opacity-100' : 'opacity-0'}`}></div>
 
               {/* Bottom Text */}
-              <div className="absolute bottom-6 left-6 z-20">
-                <h3 className="text-2xl font-semibold text-white mb-1">{project.title}</h3>
-                <p className="text-gray-300 text-sm">{project.location}</p>
-              </div>
-
-              {/* Glassmorphic View All Button (Visible on hover) */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button className="flex flex-col items-center justify-center w-24 h-24 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-sm hover:bg-black/60 transition-colors shadow-2xl scale-90 group-hover:scale-100 transition-transform duration-300">
-                  View<br/>All
-                </button>
+              <div className={`absolute bottom-4 left-4 md:bottom-8 md:left-8 z-20 transition-opacity duration-700 delay-100 ${isCenter ? 'opacity-100' : 'opacity-0'}`}>
+                <h3 className="text-lg md:text-3xl lg:text-[40px] font-semibold text-white mb-0.5 md:mb-1 uppercase tracking-tight whitespace-nowrap" style={{ fontFamily: "'Bebas Neue', 'Oswald', sans-serif" }}>
+                  {project.title}
+                </h3>
+                <p className="text-gray-300 text-xs md:text-base font-light whitespace-nowrap">{project.type}</p>
               </div>
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </section>
   );
