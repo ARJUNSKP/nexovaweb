@@ -126,11 +126,11 @@ export default function ProjectSection() {
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-black text-lg md:text-xl uppercase" style={{ fontFamily: "'Bebas Neue', 'Oswald', sans-serif", letterSpacing: "1px" }}>
-                <span>{selectedProject.services?.[0] || "Architecture"}</span>
+                <span>{selectedProject.area}</span>
                 <span className="text-black/80 font-normal">|</span>
-                <span>{selectedProject.client || "Client Name"}</span>
+                <span>{selectedProject.client}</span>
                 <span className="text-black/80 font-normal">|</span>
-                <span>{selectedProject.timeline || "2 Years"}</span>
+                <span>{selectedProject.timeline}</span>
               </div>
             </div>
           </div>
