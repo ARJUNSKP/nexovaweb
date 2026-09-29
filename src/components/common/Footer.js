@@ -50,10 +50,12 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="flex flex-col gap-4">
-              <li><a href="mailto:contact@example.com" className="text-gray-400 hover:text-white transition-colors text-sm">contact@example.com</a></li>
-              <li><a href="tel:+15551234567" className="text-gray-400 hover:text-white transition-colors text-sm">+1 (555) 123-4567</a></li>
-              <li className="text-gray-400 text-sm leading-relaxed max-w-[200px]">
-                123 Main Street, Cityville, State, 12345
+              <li><a href="mailto:nexovaconstructions@gmail.com" className="text-gray-400 hover:text-white transition-colors text-sm">nexovaconstructions@gmail.com</a></li>
+              <li><a href="tel:+917012015500" className="text-gray-400 hover:text-white transition-colors text-sm">+91 7012015500</a></li>
+              <li className="text-gray-400 text-sm leading-relaxed max-w-[250px]">
+                2/1149/A104, 6th Floor, Phase - 1,<br />
+                Hilite Business Park,<br />
+                Kozhikode - 673014
               </li>
             </ul>
           </div>

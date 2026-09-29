@@ -5,7 +5,7 @@ export default function HeroBanner() {
     <div className="relative w-full h-[100dvh] bg-black">
       {/* Static Background Image */}
       <img
-        src="/Eyv1ZwKmJy5eSYZZEwI9We1sNis.jpg"
+        src="/Gemini_Generated_Image_1ppnm1ppnm1ppnm1.jpeg"
         alt="Hero Background"
         className="absolute inset-0 w-full h-full object-cover object-center"
       />

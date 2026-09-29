@@ -58,10 +58,11 @@ export default function ContactForm() {
           
           <div className="mt-8 pt-8 border-t border-gray-200">
             <h3 className="text-xl font-bold text-gray-900 mb-4">Headquarters</h3>
-            <p className="text-gray-600 mb-2">123 Business Avenue, Suite 100</p>
-            <p className="text-gray-600 mb-4">New York, NY 10001</p>
-            <p className="text-gray-900 font-medium mb-1">Phone: +1 (555) 123-4567</p>
-            <p className="text-gray-900 font-medium">Email: contact@example.com</p>
+            <p className="text-gray-600 mb-1">2/1149/A104, 6th Floor, Phase - 1,</p>
+            <p className="text-gray-600 mb-1">Hilite Business Park,</p>
+            <p className="text-gray-600 mb-4">Kozhikode - 673014</p>
+            <p className="text-gray-900 font-medium mb-1">Phone: +91 7012015500</p>
+            <p className="text-gray-900 font-medium">Email: nexovaconstructions@gmail.com</p>
           </div>
         </div>
 

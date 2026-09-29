@@ -1,32 +1,18 @@
 export default function ContactLocations() {
   const locations = [
     {
-      city: "New York HQ",
-      address: "123 Business Avenue, Suite 100",
-      postal: "New York, NY 10001",
-      phone: "+1 (555) 123-4567",
-      email: "ny@example.com",
-    },
-    {
-      city: "London",
-      address: "456 Tech Park, Innovation Way",
-      postal: "London, UK E1 6AN",
-      phone: "+44 20 7946 0958",
-      email: "london@example.com",
-    },
-    {
-      city: "Tokyo",
-      address: "789 Cyber Street, Tech District",
-      postal: "Tokyo, Japan 100-0001",
-      phone: "+81 3-1234-5678",
-      email: "tokyo@example.com",
-    },
+      city: "Kozhikode HQ",
+      address: "2/1149/A104, 6th Floor, Phase - 1, Hilite Business Park",
+      postal: "Kozhikode - 673014",
+      phone: "+91 7012015500",
+      email: "nexovaconstructions@gmail.com",
+    }
   ];
 
   return (
     <section className="bg-white py-24 w-full px-4 md:px-[43px]">
-      <div className="w-full">
-        <div className="mb-12">
+      <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
+        <div className="md:w-1/2">
           <h2 className="text-3xl md:text-5xl font-bold text-black mb-4 tracking-tight">
             Our Locations
           </h2>
@@ -35,7 +21,7 @@ export default function ContactLocations() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="w-full md:w-auto md:min-w-[400px]">
           {locations.map((loc, idx) => (
             <div key={idx} className="p-8 bg-[#f8f8f8] border border-gray-100 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-black mb-4">{loc.city}</h3>
