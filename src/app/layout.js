@@ -20,6 +20,7 @@ export const metadata = {
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import LenisProvider from "@/components/common/LenisProvider";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
 
 export default function RootLayout({ children }) {
   return (
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Footer />
+          <WhatsAppButton />
         </LenisProvider>
       </body>
     </html>

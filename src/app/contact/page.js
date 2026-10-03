@@ -32,7 +32,7 @@ export default function ContactPage() {
       <ContactLocations />
 
       {/* Form Section */}
-      <ContactForm />
+      {/* <ContactForm /> */}
     </main>
   );
 }

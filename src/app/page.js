@@ -21,7 +21,7 @@ export default function Home() {
       {/* <ProcessSection /> */}
       <ResultsSection />
       <ClientStoriesSection />
-      <ContactSection />
+      {/* <ContactSection /> */}
       <CTASection />
     </main>
   );
