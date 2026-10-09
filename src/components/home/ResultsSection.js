@@ -5,28 +5,28 @@ import { useEffect, useRef, useState } from "react";
 const results = [
   {
     id: 1,
-    statNumber: 10,
+    statNumber: 25,
     statSuffix: "+",
     title: "Years of experience",
     description: "Delivering residential, commercial, and hospitality projects with trust, precision, and dependable execution since day one.",
   },
   {
     id: 2,
-    statNumber: 132,
+    statNumber: 0,
     statSuffix: "",
     title: "Residential Projects",
     description: "Homes, student living spaces, and mixed-use developments built to last on time, on budget, and beyond expectations.",
   },
   {
     id: 3,
-    statNumber: 3,
+    statNumber: 0,
     statSuffix: "+",
     title: "3 GW+ Operating & Under Construction",
     description: "The \"3 GW+ Operating\" label is clearly leftover energy template copy. Depending on what's true for Construa, this could be:",
   },
   {
     id: 4,
-    statNumber: 300,
+    statNumber: 0,
     statSuffix: "+",
     title: "Homes built worldwide",
     description: "Sq. ft. delivered (or units handed over) spaces where families live, businesses thrive, and communities grow.",
@@ -108,7 +108,7 @@ export default function ResultsSection() {
               <div className="flex justify-end">
                 <span className="text-6xl md:text-8xl font-light tracking-tight">
                   <AnimatedNumber value={result.statNumber} isVisible={isVisible} />
-                  {result.statSuffix}
+                  {/* {result.statSuffix} */}
                 </span>
               </div>
               
