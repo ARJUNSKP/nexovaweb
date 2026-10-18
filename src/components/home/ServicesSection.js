@@ -3,28 +3,16 @@ import Image from "next/image";
 const services = [
   {
     id: 1,
-    title: "Property Development",
-    description: "End-to-end delivery of large-scale residential and mixed-use developments, from land acquisition through to final handover.",
+    title: "Residential",
+    description: "From bespoke luxury villas and custom residences to modern multi-family housing, we deliver thoughtfully designed living spaces built with architectural precision, uncompromising quality, and enduring durability.",
+    image: "/home/Image (Hotel) (2).png",
+  },
+  {
+    id: 2,
+    title: "Commercial",
+    description: "Turnkey delivery for state-of-the-art corporate offices, retail hubs, and commercial developments. Engineered for operational efficiency, structural excellence, and strict timeline adherence to help your business scale.",
     image: "/home/Image (white and blue concrete building under blue sky during daytime).png",
   },
-  // {
-  //   id: 2,
-  //   title: "Design & Planning",
-  //   description: "End-to-end delivery of large-scale residential and mixed-use developments, from land acquisition through to final handover.",
-  //   image: "/home/Image (man in yellow shirt and blue denim jeans jumping on brown wooden railings under blue and).png",
-  // },
-  {
-    id: 3,
-    title: "Construction Management",
-    description: "End-to-end delivery of large-scale residential and mixed-use developments, from land acquisition through to final handover.",
-    image: "/home/Image (a person drawing a diagram on a piece of paper) (1).png",
-  },
-  // {
-  //   id: 4,
-  //   title: "Turnkey Delivery",
-  //   description: "End-to-end delivery of large-scale residential and mixed-use developments, from land acquisition through to final handover.",
-  //   image: "/home/Image (white and blue concrete building under blue sky during daytime).png",
-  // },
 ];
 
 export default function ServicesSection() {

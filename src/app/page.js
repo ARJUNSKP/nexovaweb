@@ -15,12 +15,12 @@ export default function Home() {
     <main className="bg-white w-full relative">
       <HeroBanner />
       <AboutSection />
-      <FeaturedProjects />
+      {/* <FeaturedProjects /> */}
       <TestimonialSection />
       <ServicesSection />
       {/* <ProcessSection /> */}
       <ResultsSection />
-      <ClientStoriesSection />
+      {/* <ClientStoriesSection /> */}
       {/* <ContactSection /> */}
       <CTASection />
     </main>

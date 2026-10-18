@@ -33,9 +33,9 @@ export default function TestimonialSection() {
             </h3>
 
             {/* Author */}
-            <div>
-              <p className="font-semibold text-lg text-white">Hiran Jackob</p>
-              <p className="text-gray-300 text-sm">Company CEO</p>
+            <div className="mb-10">
+              {/* <p className="font-semibold text-lg text-white">Hiran Jackob</p>
+              <p className="text-gray-300 text-sm">Company CEO</p> */}
             </div>
           </div>
 

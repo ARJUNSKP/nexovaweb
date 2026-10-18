@@ -28,7 +28,7 @@ const results = [
     id: 4,
     statNumber: 0,
     statSuffix: "+",
-    title: "Homes built worldwide",
+    title: "Commercial projects built worldwide",
     description: "Sq. ft. delivered (or units handed over) spaces where families live, businesses thrive, and communities grow.",
   },
 ];
