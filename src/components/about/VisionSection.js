@@ -20,7 +20,7 @@ export default function VisionSection() {
               <div className="p-8 md:p-10 flex flex-col flex-1">
                 <h3 className="text-3xl font-medium mb-6">Our Vision</h3>
                 <p className="text-gray-600 text-[15px] leading-relaxed">
-                  At Nivasata, our vision is to become a symbol of excellence in the real estate industry by shaping timeless spaces that enrich lives and communities. We aspire to lead with innovation, integrity, and a commitment to quality—delivering developments that reflect the perfect harmony of aesthetics, functionality, and sustainability.
+                  To be a leading construction company recognized for delivering landmark commercial, residential, auditorium, and infrastructure projects that set new standards in quality, innovation, and sustainability while creating lasting value for our clients, communities, and future generations.
                 </p>
               </div>
             </div>
@@ -37,7 +37,7 @@ export default function VisionSection() {
               <div className="p-8 md:p-10 flex flex-col flex-1">
                 <h3 className="text-3xl font-medium mb-6">Our Mission</h3>
                 <p className="text-gray-600 text-[15px] leading-relaxed">
-                  Our mission is to consistently deliver premium residential and commercial spaces that exceed expectations. We strive to foster long-term relationships with our clients through transparency, expert planning, and flawless execution, turning aspirations into enduring realities and redefining the meaning of luxury living.
+                 At Nexova Constructions LLP, our mission is to deliver exceptional construction solutions through engineering excellence, uncompromising quality, and innovative practices. We are committed to building strong client relationships founded on trust, transparency, and professionalism while ensuring every project is completed safely, on time, and to the highest standards. Through our dedication to continuous improvement and responsible construction, we strive to create spaces that inspire confidence and leave a lasting legacy.
                 </p>
               </div>
             </div>
@@ -56,7 +56,12 @@ export default function VisionSection() {
             <div className="w-full md:w-[60%] p-8 md:p-12 flex flex-col justify-center">
               <h3 className="text-3xl font-medium mb-6">Our Value</h3>
               <p className="text-gray-600 text-[15px] leading-relaxed">
-                Integrity is our cornerstone. We believe in placing the needs and satisfaction of our clients at the forefront of every decision and service delivery. Innovation, adaptability, and accountability have enabled us to provide exceptional solutions and build lasting partnerships. We are committed to sustainable development and creating environments that endure for generations.
+                Nexova Constructions LLP is a trusted construction company specializing in commercial buildings, apartments, auditoriums, and infrastructure projects. We are committed to delivering quality workmanship, innovative solutions, and timely project execution while maintaining the highest standards of safety and professionalism.<br/><br/>
+
+Driven by integrity and engineering excellence, we build lasting relationships with our clients by transforming ideas into strong, functional, and inspiring spaces.<br/><br/>
+
+Nexova Constructions LLP<br/> 
+Build to Inspire
               </p>
             </div>
           </div>
