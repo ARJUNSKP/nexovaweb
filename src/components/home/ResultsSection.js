@@ -12,7 +12,7 @@ const results = [
   },
   {
     id: 2,
-    statNumber: 0,
+    statNumber: 4,
     statSuffix: "",
     title: "Residential Projects",
     description: "Homes, student living spaces, and mixed-use developments built to last on time, on budget, and beyond expectations.",
@@ -26,7 +26,7 @@ const results = [
   },
   {
     id: 4,
-    statNumber: 0,
+    statNumber: 3,
     statSuffix: "+",
     title: "Commercial projects built worldwide",
     description: "Sq. ft. delivered (or units handed over) spaces where families live, businesses thrive, and communities grow.",
