@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 const results = [
   {
     id: 1,
-    statNumber: 25,
+    statNumber: 9,
     statSuffix: "+",
     title: "Years of experience",
     description: "Delivering residential, commercial, and hospitality projects with trust, precision, and dependable execution since day one.",
