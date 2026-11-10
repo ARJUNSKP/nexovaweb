@@ -2,11 +2,10 @@ import ProjectSection from "@/components/project/ProjectSection";
 import ProjectHeroBanner from "@/components/project/ProjectHeroBanner";
 
 export const metadata = {
-  title: "Products | Nexova Constructions",
-  description:
-    "Explore products and construction solutions offered by Nexova Constructions.",
-  alternates: {
-    canonical: "/project",
+  title: "Projects | Nexova",
+  robots: {
+    index: false,
+    follow: false,
   },
 };
 

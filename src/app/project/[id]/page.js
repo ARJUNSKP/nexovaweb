@@ -9,12 +9,15 @@ export async function generateMetadata({ params }) {
   const project = getProjectById(id);
   
   if (!project) {
-    return { title: "Project Not Found | Nexova" };
+    return { title: "Project Not Found | Nexova", robots: { index: false, follow: false } };
   }
 
   return {
     title: `${project.title} | Nexova Projects`,
-    description: project.description,
+    robots: {
+      index: false,
+      follow: false,
+    },
   };
 }
 

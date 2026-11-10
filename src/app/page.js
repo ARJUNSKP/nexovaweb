@@ -17,6 +17,10 @@ export const metadata = {
   alternates: {
     canonical: "/",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const jsonLd = {

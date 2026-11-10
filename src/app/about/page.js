@@ -4,11 +4,10 @@ import TeamSection from "@/components/about/TeamSection";
 import ResultsSection from "@/components/home/ResultsSection";
 
 export const metadata = {
-  title: "About Us | Nexova Constructions",
-  description:
-    "Learn about Nexova Constructions, our company, expertise, experience and commitment to quality construction.",
-  alternates: {
-    canonical: "/about",
+  title: "About Us | Nexova",
+  robots: {
+    index: false,
+    follow: false,
   },
 };
 

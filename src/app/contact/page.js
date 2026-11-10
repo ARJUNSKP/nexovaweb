@@ -2,11 +2,10 @@ import ContactLocations from "@/components/contact/ContactLocations";
 import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata = {
-  title: "Contact Us | Nexova Constructions",
-  description:
-    "Contact Nexova Constructions for residential, commercial construction enquiries.",
-  alternates: {
-    canonical: "/contact",
+  title: "Contact Us | Nexova",
+  robots: {
+    index: false,
+    follow: false,
   },
 };
 
