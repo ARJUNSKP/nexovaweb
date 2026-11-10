@@ -17,6 +17,9 @@ export default function HeroBanner() {
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-8">
           {/* Left Side: Headlines */}
           <div className="max-w-2xl text-center md:text-left">
+            <span className="text-white/80 font-medium tracking-widest uppercase text-xs md:text-sm mb-3 block">
+              Nexova Constructions
+            </span>
             <h1
               className="text-5xl md:text-7xl font-bold text-white mb-[24px] leading-tight"
               style={{ fontFamily: 'var(--font-space-grotesk), sans-serif' }}

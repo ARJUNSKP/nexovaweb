@@ -5,6 +5,9 @@ export const metadata = {
   title: "Products | Nexova Constructions",
   description:
     "Explore products and construction solutions offered by Nexova Constructions.",
+  alternates: {
+    canonical: "/project",
+  },
 };
 
 export default function ProjectPage() {

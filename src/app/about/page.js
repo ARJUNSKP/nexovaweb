@@ -7,6 +7,9 @@ export const metadata = {
   title: "About Us | Nexova Constructions",
   description:
     "Learn about Nexova Constructions, our company, expertise, experience and commitment to quality construction.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

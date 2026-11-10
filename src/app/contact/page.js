@@ -5,6 +5,9 @@ export const metadata = {
   title: "Contact Us | Nexova Constructions",
   description:
     "Contact Nexova Constructions for residential, commercial construction enquiries.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

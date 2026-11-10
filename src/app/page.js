@@ -14,11 +14,45 @@ export const metadata = {
   title: "Nexova Constructions | Residential & Commercial Construction",
   description:
     "Nexova Constructions delivers residential, commercial construction projects.",
+  alternates: {
+    canonical: "/",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.nexovaconstructions.com/#website",
+      "url": "https://www.nexovaconstructions.com",
+      "name": "Nexova Constructions",
+      "alternateName": ["Nexova", "Nexova Constructions Kerala"],
+      "description":
+        "Specialist main contractor delivering residential, commercial, and hospitality projects.",
+      "publisher": {
+        "@id": "https://www.nexovaconstructions.com/#organization",
+      },
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.nexovaconstructions.com/#organization",
+      "name": "Nexova Constructions",
+      "url": "https://www.nexovaconstructions.com",
+      "logo": "https://www.nexovaconstructions.com/icon.png",
+      "description":
+        "Nexova Constructions delivers residential, commercial, and hospitality construction projects.",
+    },
+  ],
 };
 
 export default function Home() {
   return (
     <main className="bg-white w-full relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <HeroBanner />
       <AboutSection />
       {/* <FeaturedProjects /> */}
