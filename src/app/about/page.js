@@ -4,8 +4,9 @@ import TeamSection from "@/components/about/TeamSection";
 import ResultsSection from "@/components/home/ResultsSection";
 
 export const metadata = {
-  title: "About Us | Nexova",
-  description: "Learn more about our vision for luxury real estate and our commitment to crafting premium spaces.",
+  title: "About Us | Nexova Constructions",
+  description:
+    "Learn about Nexova Constructions, our company, expertise, experience and commitment to quality construction.",
 };
 
 export default function AboutPage() {

@@ -10,6 +10,12 @@ import ClientStoriesSection from "@/components/home/ClientStoriesSection";
 import ContactSection from "@/components/home/ContactSection";
 import CTASection from "@/components/home/CTASection";
 
+export const metadata = {
+  title: "Nexova Constructions | Residential & Commercial Construction",
+  description:
+    "Nexova Constructions delivers residential, commercial construction projects.",
+};
+
 export default function Home() {
   return (
     <main className="bg-white w-full relative">

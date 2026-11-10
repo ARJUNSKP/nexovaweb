@@ -2,8 +2,9 @@ import ProjectSection from "@/components/project/ProjectSection";
 import ProjectHeroBanner from "@/components/project/ProjectHeroBanner";
 
 export const metadata = {
-  title: "Projects | Nexova",
-  description: "Explore a selection of residential, commercial, and hospitality projects.",
+  title: "Products | Nexova Constructions",
+  description:
+    "Explore products and construction solutions offered by Nexova Constructions.",
 };
 
 export default function ProjectPage() {

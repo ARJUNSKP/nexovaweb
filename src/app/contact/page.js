@@ -2,8 +2,9 @@ import ContactLocations from "@/components/contact/ContactLocations";
 import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata = {
-  title: "Contact Us | Nexova",
-  description: "Get in touch with Nexova. We have regional offices strategically placed to ensure we are always close to your project sites.",
+  title: "Contact Us | Nexova Constructions",
+  description:
+    "Contact Nexova Constructions for residential, commercial construction enquiries.",
 };
 
 export default function ContactPage() {
