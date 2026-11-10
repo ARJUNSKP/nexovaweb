@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nexovaconstructions.com/sitemap.xml
+Sitemap: https://www.nexovaconstructions.com/sitemap.xml
