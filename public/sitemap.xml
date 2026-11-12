@@ -6,4 +6,53 @@
     <priority>1.0</priority>
   </url>
 
+  <url>
+    <loc>https://www.nexovaconstructions.com/about</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.nexovaconstructions.com/project</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.nexovaconstructions.com/contact</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Project Detail Pages -->
+  <url>
+    <loc>https://www.nexovaconstructions.com/project/1</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.nexovaconstructions.com/project/2</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.nexovaconstructions.com/project/3</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.nexovaconstructions.com/project/4</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.nexovaconstructions.com/project/5</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.nexovaconstructions.com/project/6</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.nexovaconstructions.com/project/7</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.nexovaconstructions.com/project/8</loc>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
