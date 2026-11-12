@@ -35,17 +35,25 @@ export const metadata = {
 
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-      { url: "/icon-48.png", sizes: "48x48", type: "image/png" },
-      { url: "/icon-96.png", sizes: "96x96", type: "image/png" },
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/favicon.ico?v=2", sizes: "any" },
+      { url: "/icon.svg?v=2", type: "image/svg+xml" },
+      { url: "/icon-48.png?v=2", sizes: "48x48", type: "image/png" },
+      { url: "/icon-96.png?v=2", sizes: "96x96", type: "image/png" },
+      { url: "/icon-192.png?v=2", sizes: "192x192", type: "image/png" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.png?v=2", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/favicon.ico",
+    shortcut: "/favicon.ico?v=2",
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Nexova Constructions",
+  alternateName: ["Nexova", "NexovaConstructions"],
+  url: "https://www.nexovaconstructions.com",
 };
 
 import Header from "@/components/common/Header";
@@ -59,6 +67,12 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col">
         <LenisProvider>
           <Header />
